@@ -10,23 +10,39 @@ Description
 
 Classes
 -------
-.. autosummary:
+.. autosummary::
     :toctree: _autosummary
 
     {% for class in classes %}
         {{ class }}
-    {% endfor %}s
+    {% endfor %}
 
 {% endif %}
 
 {% if functions %}
 Functions
 ---------
-.. autosummary:
+.. autosummary::
     :toctree: _autosummary
 
     {% for function in functions %}
         {{ function }}
+    {% endfor %}
+
+{% endif %}
+
+
+Modules
+---------
+{% if modules %}
+.. rubric:: Modules
+
+.. autosummary::
+    :toctree: _autosummary
+    :recursive:
+
+    {% for item in modules %}
+       {{ item }}
     {% endfor %}
 
 {% endif %}
